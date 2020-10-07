@@ -1,0 +1,179 @@
+.item-contents{
+  display: flex;
+  margin-top: 100px;
+}
+
+.item-pickup{
+  background-color: rgb(255, 255, 255);
+  width: 45vw;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(160, 160, 160);
+}
+
+.pickup-project-name{
+  font-size: 23px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: rgb(62, 61, 61);
+}
+
+.projects{
+  display: flex;
+  margin: 15px 0 0 20px;
+}
+
+.project-amount{
+  font-size: 14px;
+  padding-right: 20px;
+  color: rgb(133, 133, 133);
+}
+.project-amount span{
+  font-size: 24px;
+  color: rgb(87, 87, 87);
+}
+
+.project-support{
+  font-size: 14px;
+  padding-right: 20px;
+  color: rgb(133, 133, 133);
+}
+
+.project-support span{
+  font-size: 24px;
+  color: rgb(87, 87, 87);
+}
+
+.project-day{
+  font-size: 14px;
+  color: rgb(133, 133, 133);
+}
+
+.project-day span{
+  font-size: 24px;
+  color: rgb(87, 87, 87);
+}
+
+
+.item-lists{
+  width: 55vw;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
+  
+}
+
+.list{
+  width: 23vw;
+  height: 290px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(160, 160, 160);
+}
+
+.item-list-image{
+  border-bottom: solid 5px rgb(254, 194, 82);
+  border-radius: 10px 10px 0 0;
+  width: 23vw;
+  height: 30vh;
+  margin-bottom: 5px;
+}
+
+.item-image{
+  border-bottom: solid 10px rgb(254, 194, 82);
+  border-radius: 10px 10px 0 0;
+  width: 41vw;
+  height: 60vh;
+  margin-bottom: 15px;
+}
+
+
+
+.pickup-list-name{
+  font-size: 14px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: rgb(62, 61, 61);
+}
+
+.projects-list{
+  display: flex;
+  margin: 10px 0 0 20px;
+}
+
+.project-list-amount{
+  font-size: 10px;
+  padding-right: 20px;
+  color: rgb(133, 133, 133);
+}
+
+.project-list-support{
+  font-size: 10px;
+  padding-right: 20px;
+  color: rgb(133, 133, 133);
+}
+
+.project-list-day{
+  font-size: 10px;
+  color: rgb(133, 133, 133);
+}
+
+.project-list-amount span{
+  font-size: 11px;
+  color: rgb(87, 87, 87);
+}
+
+.project-list-support span{
+  font-size: 11px;
+  color: rgb(87, 87, 87);
+}
+
+.project-list-day span{
+  font-size: 11px;
+  color: rgb(87, 87, 87);
+}
+
+
+
+/* ---------------------------- */
+
+/* start-project */
+
+.start-project{
+  width: 90vw;
+  padding: 80px 80px;
+  display: flex;
+  justify-content: center;
+}
+.find-text{
+  text-align: center;
+}
+
+.start-project h1{
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(46, 46, 46);
+}
+.btn-find a{
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  color: white;
+  font-size: 18px;
+  padding: 10px 30px 10px 30px;
+  margin-top: 30px;
+  background-color: rgb(252, 104, 104);
+  border-radius: 8px;
+  box-shadow: 0 3px rgb(255, 155, 155);
+}
+
+.btn-find a:hover{
+  background-color: rgb(254, 153, 153);
+}
+
+
+.new-project{
+  width: 80vw;
+
+}
+

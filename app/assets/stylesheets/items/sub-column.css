@@ -1,0 +1,98 @@
+
+.new-project-title{
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 30px 24px;
+}
+
+.new-project-lists{
+  width: 85vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.new-project-list{
+  width: 18vw;
+  height: 340px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(160, 160, 160);
+}
+
+.new-project-image{
+  width: 18vw;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.new-project-name{
+  font-size: 12px;
+  padding: 0 0 15px 15px;
+}
+
+.new-project-tag{
+  width: 16vw;
+  height: 20px;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 50px;
+  color: rgb(60, 60, 60);
+}
+
+
+.new-project-detail{
+  width: 16vw;
+  /* height: 63px; */
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  margin: auto;
+}
+
+
+
+.new-project-amount{
+  font-size: 10px;
+  color: rgb(60, 60, 60);
+
+}
+
+.new-project-amount span{
+  font-size: 12px;
+  color: rgb(31, 31, 31);
+
+}
+
+.new-project-support{
+  font-size: 10px;
+  color: rgb(60, 60, 60);
+
+}
+
+.new-project-support span{
+  font-size: 12px;
+  color: rgb(31, 31, 31);
+
+}
+
+
+.new-project-day{
+  font-size: 10px;
+  color: rgb(60, 60, 60);
+
+}
+
+.new-project-day span{
+  font-size: 12px;
+  color: rgb(31, 31, 31);
+
+}
+
+
+
