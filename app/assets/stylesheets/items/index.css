@@ -18,16 +18,22 @@ a{
   text-decoration: none;
 }
 
+.header-image{
+  width: 100vw;
+  height: 730px;
+  vertical-align: bottom;
+}
+
 .work-report{
-  height: 350px;
+  height: 380px;
   border-top: solid 1px darkgray;
-  border-bottom: solid 1px darkgray;
+  border-bottom: solid 2px darkgray;
+  background-color: rgb(247, 247, 247);
 }
 
 .work-report-contents{
   width: 85vw;
   margin: auto;
-  /* background-color: rgb(255, 252, 225); */
   height: 350px;
 }
 
@@ -48,17 +54,56 @@ a{
   height: 220px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgb(160, 160, 160);
+  position: relative;
+}
 
+.work-report-image{
+  width: 24vw;
+  height: 220px;
+  border-radius: 10px;
+  filter:brightness(50%);
+}
+
+
+.work-report-image:hover{
+  filter:brightness(100%);
+}
+
+.btn-work-report{
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  background-color:rgb(255, 198, 92);
+  padding: 2px 20px 2px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 100;
+  color: rgb(79, 79, 79);
+}
+
+.work-report-tag{
+  margin-left: 1px;
+}
+
+
+.work-report-title{
+  position: absolute;
+  font-size: 16px;
+  top: 48%;
+  left: 10%;
+  color: white;
+  margin-top: 20px;
 }
 
 
 
 
 
-
-
-
-
+.footer-image{
+  width: 100vw;
+  height: 650px;
+  vertical-align: bottom;
+}
 
 
 

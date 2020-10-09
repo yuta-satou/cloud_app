@@ -2,7 +2,7 @@
 <div class='main'>
   <%= render "items/header" %>
   <div class='top-image'>
-    <%= image_tag "baseball-field-1149153_1920.jpg", size: '1430x720'%>
+    <%= image_tag "walking-next-to-people-4435214_1280.png", class: 'header-image'%>
   </div>
   <div class='main-column'>
     <%= render "items/main-column" %>
@@ -13,17 +13,36 @@
   <div class='work-report'>
     <div class='work-report-contents'>
       <h2 class='work-report-name'>最近の活動報告</h2>
-      <div class='work-report-box'>
-        <div class='work-report-list'>
-        </div>
-        <div class='work-report-list'>
-        </div>
-        <div class='work-report-list'>
-        </div>
-      </div>
+      <ul class='work-report-box'>
+        <li class='work-report-list'>
+          <%= image_tag "cat-1941089_1280.jpg", class: 'work-report-image' %>
+          <div class="btn-work-report">
+            <i class="fas fa-bullhorn"></i>活動報告
+            <%# <div class='work-report-tag'>活動報告</div> %>
+          </div>
+          <div class='work-report-title'>【10月5日】ウチのネコが死にました。</div>
+        </li>
+        <li class='work-report-list'>
+          <%= image_tag "cat-1941089_1280.jpg", class: 'work-report-image' %>
+          <div class="btn-work-report">
+            <i class="fas fa-bullhorn"></i>活動報告
+            <%# <div class='work-report-tag'>活動報告</div> %>
+          </div>
+
+        </li>
+        <li class='work-report-list'>
+          <%= image_tag "cat-1941089_1280.jpg", class: 'work-report-image' %>
+          <div class="btn-work-report">
+            <i class="fas fa-bullhorn"></i>活動報告
+            <%# <div class='work-report-tag'>活動報告</div> %>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-  <%= image_tag "walking-next-to-people-4435214_1280.png", size: '1450x650'%>
+  <%# image_tag "walking-next-to-people-4435214_1280.png", size: '1450x650'%>
+  <%= image_tag "crowdfunding-3158320_1280.png", class: 'footer-image'%>
+  
   <%= render "items/footer" %>
 </div>
 
