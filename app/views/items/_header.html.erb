@@ -8,10 +8,13 @@
       <ul class='nav-lists'>
         <li><a class="class" href="#">クラウドファンディングをはじめる</a></li>
         <li>さがす</li>
-        <li><a class="class" href="#">ログイン</a></li>
-        <li><a class="class" href="#">新規登録</a></li>
-        <li><a class="class" href="#">ユーザー名</a></li>
-        <%# <li><a class="class" href="#">ログアウト</a></li> %>
+        <% if user_signed_in? %>
+          <li><%= "#{current_user.nickname}" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'class' %></li>
+        <% else %>
+          <li><%= link_to 'ログイン',  new_user_session_path, class: 'class' %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: 'class' %></li>
+        <% end %>
       </ul>
     </div>
   </div>
