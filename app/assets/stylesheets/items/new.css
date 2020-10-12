@@ -1,0 +1,16 @@
+
+.new-page-title{
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+
+.new-container{
+  margin-top: 70px;
+  padding-top: 40px;
+}
+
+.new-form{
+  display: inline-block;
+}
