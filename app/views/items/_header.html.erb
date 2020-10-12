@@ -1,3 +1,4 @@
+
 <div class='header-main'>
   <div class='header'>
     <div class='heading'>
@@ -6,8 +7,8 @@
     </div>
     <div class='navbar'>
       <ul class='nav-lists'>
-        <li><a class="class" href="#">クラウドファンディングをはじめる</a></li>
-        <li>さがす</li>
+        <li><%= link_to 'クラウドファンディングをはじめる', new_item_path, class: 'class' %></li>
+        <li><a class="class" href="#">さがす</a></li>
         <% if user_signed_in? %>
           <li><%= "#{current_user.nickname}" %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'class' %></li>
