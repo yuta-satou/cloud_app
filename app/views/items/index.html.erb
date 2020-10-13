@@ -4,7 +4,7 @@
     <%= image_tag "walking-next-to-people-4435214_1280.png", class: 'header-image'%>
   </div>
   <div class='main-column'>
-    <%= render "items/main-column" %>
+    <%= render "items/main-column", locals: { item: @item } %>
   </div>
    <div class='sub-column'>
     <%= render "items/sub-column" %>

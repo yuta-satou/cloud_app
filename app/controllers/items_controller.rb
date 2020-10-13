@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
   def index 
-    
+    @items = Item.all
+    @item = Item.find(1)
   end
-
 
   def new
     @item = Item.new
@@ -19,13 +19,12 @@ class ItemsController < ApplicationController
   end
 
   def show
-
   end
 
   private
 
   def item_params
-    params.require(:item).permit(:title, :sub_title, :text, :target_amount, :days, :tag)
+    params.require(:item).permit(:image, :title, :sub_title, :text, :target_amount, :days, :tag)
   end
 
 end

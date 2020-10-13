@@ -4,6 +4,9 @@
   <h1 class='new-page-title'>New Page</h1>
   <div class='new-form'>
     <%= form_with(model: @item, local: true) do |form| %>
+    <div>
+      <%= form.file_field :image, id:"item-image" %>
+    </div>
       <div>
         <%= form.label :title, 'タイトル' %>
         <%= form.text_field :title, placeholder: "タイトル" %>

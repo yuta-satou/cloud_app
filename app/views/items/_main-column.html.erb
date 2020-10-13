@@ -1,11 +1,11 @@
 <div class='item-contents'>
   <div class='item-pickup'>
-    <%= image_tag "coffee-984328_1280.jpg", class: 'item-image'%>
-    <h2 class='pickup-project-name'>PickUpプロジェクト名</h2>
+    <%= image_tag "coffee-984328_1280.jpg", item_path(@item.id), class: 'item-image'%>
+    <h2 class='pickup-project-name'><%= @item.title %></h2>
     <div class='projects'>
-      <div class='project-amount'>現在<span>10,000円</span></div>
+      <div class='project-amount'>現在<span><%= @item.target_amount %>円</span></div>
       <div class='project-support'>支援者<span>790人</span></div>
-      <div class='project-day'>残り<span>10日</span></div>
+      <div class='project-day'>残り<span><%= @item.days %>日</span></div>
     </div>
   </div>
 
