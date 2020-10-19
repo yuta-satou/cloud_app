@@ -1,6 +1,6 @@
 <div class='item-contents'>
   <div class='item-pickup'>
-    <%= image_tag "coffee-984328_1280.jpg", item_path(@item.id), class: 'item-image'%>
+    <%= link_to image_tag("coffee-984328_1280.jpg", class: 'item-image'), item_path(@item.id) %>
     <h2 class='pickup-project-name'><%= @item.title %></h2>
     <div class='projects'>
       <div class='project-amount'>現在<span><%= @item.target_amount %>円</span></div>

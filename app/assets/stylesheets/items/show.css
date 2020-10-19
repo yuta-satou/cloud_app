@@ -1,0 +1,300 @@
+
+.show-top-page{
+  width: 100vw;
+  margin-top: 70px;
+  padding-top: 40px;
+  background-color: rgb(244, 244, 244);
+}
+
+.show-page-title{
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.show-tag{
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.show-tag-list{
+  font-size: 14px;
+  color: rgb(165, 165, 165);
+  padding-right: 35px;
+}
+
+
+.show-container{
+  width: 80vw;
+  display: flex;
+  margin: auto;
+}
+
+/* .main-container        */
+
+.main-container{
+  width: 55%;
+}
+
+.show-item-image{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sub-title{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.btn-code{
+  padding: 30px;
+  /* background-color: rgb(200, 253, 255); */
+}
+
+.contents-list{
+  display: flex;
+  margin-top: 30px;
+}
+
+.contents-list li{
+  font-size: 14px;
+  padding: 15px;
+  margin-left: 5px;
+  color: rgb(109, 109, 109);
+  background-color: rgb(255, 255, 255);
+  border-top: solid 2px rgb(255, 161, 80);
+
+}
+
+/* ------------------------------- */
+
+
+/* side-container          */
+
+.side-container{
+  width: 45%;
+}
+
+.side-item-contents{
+  width: 75%;
+  margin: auto;
+}
+
+.total-inner{
+  margin-top: 10px;
+}
+
+.backer-amount h5{
+  font-size: 14px;
+  color: rgb(52, 52, 52);
+}
+.backer-amount h5 span{
+  font-size: 18px;
+  color: rgb(7, 7, 7);
+}
+
+.backer-amount strong{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.support-person{
+  margin-top: 40px;
+}
+
+.support-person-number{
+  font-size: 14px;
+  color: rgb(52, 52, 52);
+}
+
+.fa-user{
+  padding-right:10px; 
+  color: black;
+}
+
+.number{
+  font-size: 40px;
+  font-weight: bold;
+
+}
+
+.recruitment-end{
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.recruitment-end-number{
+  font-size: 14px;
+  color: rgb(52, 52, 52);
+}
+
+.fa-clock{
+  padding-right:10px; 
+  color: black;
+}
+
+
+.support-box{
+  width: 90%;
+  margin: auto;
+}
+.btn-support{
+  display: inline-block;
+  padding: 25px 30px;
+  background-color: rgb(252, 79, 79);
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 5px 0px rgba(255, 46, 46, 0.5);
+}
+.support-name{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.fa-chevron-circle-right{
+  margin-left: 15px;
+  font-size:1.1em;
+}
+
+
+
+.btn-favorite{
+  display: inline-block;
+  padding: 10px 120px;
+  background-color: rgba(255, 255, 255, 0.351);
+  margin-bottom: 20px;
+  border: solid 1px rgb(205, 205, 205);
+}
+
+.favorite{
+  color: rgb(92, 92, 92);
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+/* show-content-page  */
+
+.show-content-page{
+  width: 100vw;
+}
+
+
+/* .main-container */
+
+.home{
+  height: 1000px;
+  background-color: rgb(255, 244, 235);
+}
+
+
+
+/* side-container */
+.profile-detail{
+  width: 80%;
+  height: 400px;
+  background-color: rgb(247, 247, 247);
+  margin: auto;
+  text-align: center;
+}
+
+.profile-box{
+  margin-top:30px;
+}
+
+
+
+
+.profile-image{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+
+.profile-name{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.profile-message{
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  background-color: rgb(37, 233, 233);
+  color: rgb(252, 252, 252);
+  border-radius: 5px 5px;
+  margin-top: 20px;
+}
+
+.fa-envelope{
+  margin-right: 5px;
+}
+
+
+
+
+
+.return-detail{
+  width: 80%;
+  /* background-color: rgb(255, 175, 175); */
+  margin: auto;
+}
+
+.return-detail h2{
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.return-list{
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  margin-bottom: 30px;
+}
+
+.return-list-box{
+  width: 90%;
+  margin: auto;
+}
+
+.return-money{
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.btn-return{
+  padding: 10px 20px 10px 20px;
+  background-color: rgb(255, 107, 107);
+  color: rgb(252, 252, 252);
+  border-radius: 5px 5px;
+  text-align: center;
+}
+
+.return-message{
+  font-size: 15px;
+  color: rgb(89, 89, 89);
+  margin-top: 20px;
+}
+
+.return-message p{
+  margin-top: 20px;
+}
+
+.support-person-list{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+}
+
+
+

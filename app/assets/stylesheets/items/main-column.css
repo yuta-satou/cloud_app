@@ -80,12 +80,20 @@
   margin-bottom: 5px;
 }
 
+.item-list-image:hover{
+  opacity: 0.7;
+}
+
 .item-image{
   border-bottom: solid 10px rgb(254, 194, 82);
   border-radius: 10px 10px 0 0;
   width: 41vw;
   height: 60vh;
   margin-bottom: 15px;
+}
+
+.item-image:hover{
+  opacity: 0.7;
 }
 
 

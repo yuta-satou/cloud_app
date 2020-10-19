@@ -1,0 +1,138 @@
+
+<%= render "items/header" %>
+<div class='show-top-page'>
+  <h1 class='show-page-title'>タイトル</h1>
+  <ul class='show-tag'>
+    <li class='show-tag-list'><i class="fas fa-tags"></i>フード・飲食</li>
+    <li class='show-tag-list'><i class="fas fa-tags"></i>動物・植物</li>
+  </ul>
+  <div class='show-container'>
+
+    <div class='main-container'>
+      <%= image_tag "cat-1941089_1280.jpg", class: 'show-item-image' %>
+      <div class='sub-title'>サブタイトル</div>
+      <div class='btn-code'>
+        タグ一覧
+      </div>
+      <ul class='contents-list'>
+        <li>ホーム</li>
+        <li>活動報告</li>
+        <li>支援者</li>
+        <li>コメント</li>
+      </ul>
+    </div>
+
+    <div class='side-container'>
+      <div class='side-item-contents'>
+        <div class='total-inner'>
+          <div class='backer-amount'>
+            <h5><span>¥</span> 現在の支援総額</h5>
+            <strong>100000円</strong>
+            <div>目標金額は400000円</div>
+          </div>
+        </div>
+        <div class='support-person'>
+          <div class='support-person-number'><i class="fas fa-user"></i>支援者数</div>
+          <div class='number'>300人</div>
+        </div>
+        <div class='recruitment-end'>
+          <div class='recruitment-end-number'><i class="far fa-clock"></i>募集終了まで残り</div>
+          <div class='number'>20日</div>
+        </div>
+
+        <div class='support-box'>
+          <div class='btn-support'>
+            <div class='support-name'>プロジェクトを支援する<i class="fa fa-chevron-circle-right"></i></div>
+          </div>
+          <div class='btn-favorite'>
+            <div class='favorite'>お気に入り</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class='show-content-page'>
+  <div class='show-container'>
+
+    <div class='main-container'>
+    <div class='home'>
+      <h1>本文内容</h1>
+    </div>
+
+    </div>
+
+    <div class='side-container'>
+      <div class='profile-detail'>
+        <div class='profile-box'>
+          <%= image_tag "Df9kcOEUcAAFsr9.jpg", class: 'profile-image' %>
+          <div class='profile-name'>
+            ユーザー名
+          </div>
+
+          <div class='profile-message'>
+            <i class="fa fa-envelope"></i>メッセージで意見や質問を送る
+          </div>
+        </div>
+      </div>
+
+      <div class='return-detail'>
+        <h2>リターンを選ぶ</h2>
+        <ul>
+          <li class='return-list'>
+            <div class='return-list-box'>
+              <div class='return-money'>
+                500円
+              </div>
+              <div class='btn-return'>
+                このリターンを選択する
+              </div>
+              <div class='return-message'>
+                <p>
+                お礼メッセージ<br/>
+                ご支援いただいた方に、心からのお礼をお送りさせていただきます。
+                </p>
+                <p class='remarks_field'>
+                  ※支援時、必ず備考欄にご希望のお名前をご記入ください。
+                </p>
+              </div>
+              <div class='support-person-list'>
+                <div class='person-list-number'>支援者：12人</div>
+                <div class='delivery_scheduled'>お届け予定：2020年12月</div>
+              </div>
+
+            </div>
+          </li>
+          <li class='return-list'>
+            <div class='return-list-box'>
+              <div class='return-money'>
+                8000円
+              </div>
+              <div class='btn-return'>
+                このリターンを選択する
+              </div>
+              <div class='return-message'>
+                <p>
+                お礼メッセージ<br/>
+                ご支援いただいた方に、心からのお礼をお送りさせていただきます。
+                </p>
+                <p class='remarks_field'>
+                  ※支援時、必ず備考欄にご希望のお名前をご記入ください。
+                </p>
+              </div>
+              <div class='support-person-list'>
+                <div class='person-list-number'>支援者：2人</div>
+                <div class='delivery_scheduled'>お届け予定：2020年12月</div>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "items/footer" %>

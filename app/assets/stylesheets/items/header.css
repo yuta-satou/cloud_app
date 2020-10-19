@@ -11,12 +11,14 @@
 
 .header {
   background-color: rgb(255, 255, 255);
-  padding: 10px 0;
+  padding: 15px 0;
   display: flex;
-  box-shadow: 0 0 8px rgb(45, 45, 45);
+  box-shadow: 0 0 8px rgb(67, 67, 67);
 }
 .title{
-  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  color: rgb(255, 96, 96);
 }
 .heading{
   width: 50vw;
