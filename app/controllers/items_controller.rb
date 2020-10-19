@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def index 
     @items = Item.all
-    @item = Item.find(1)
+    @item = Item.find(2)
   end
 
   def new

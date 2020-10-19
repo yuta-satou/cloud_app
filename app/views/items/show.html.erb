@@ -1,16 +1,16 @@
 
 <%= render "items/header" %>
 <div class='show-top-page'>
-  <h1 class='show-page-title'>タイトル</h1>
+  <h1 class='show-page-title'><%= @item.title %></h1>
   <ul class='show-tag'>
-    <li class='show-tag-list'><i class="fas fa-tags"></i>フード・飲食</li>
+    <li class='show-tag-list'><i class="fas fa-tags"></i><%= @item.tag %></li>
     <li class='show-tag-list'><i class="fas fa-tags"></i>動物・植物</li>
   </ul>
   <div class='show-container'>
 
     <div class='main-container'>
-      <%= image_tag "cat-1941089_1280.jpg", class: 'show-item-image' %>
-      <div class='sub-title'>サブタイトル</div>
+      <%= image_tag @item.image, class: 'show-item-image' %>
+      <div class='sub-title'><%= @item.sub_title %></div>
       <div class='btn-code'>
         タグ一覧
       </div>
@@ -27,8 +27,8 @@
         <div class='total-inner'>
           <div class='backer-amount'>
             <h5><span>¥</span> 現在の支援総額</h5>
-            <strong>100000円</strong>
-            <div>目標金額は400000円</div>
+            <strong><%= @item.target_amount %>円</strong>
+            <div>目標金額は<%= @item.target_amount %>円</div>
           </div>
         </div>
         <div class='support-person'>
@@ -37,12 +37,13 @@
         </div>
         <div class='recruitment-end'>
           <div class='recruitment-end-number'><i class="far fa-clock"></i>募集終了まで残り</div>
-          <div class='number'>20日</div>
+          <div class='number'><%= @item.days %>日</div>
         </div>
 
         <div class='support-box'>
           <div class='btn-support'>
-            <div class='support-name'>プロジェクトを支援する<i class="fa fa-chevron-circle-right"></i></div>
+            <%= link_to 'プロジェクトを支援する', new_item_order_path(@item.id), class: "support-name"%><i class="fa fa-chevron-circle-right"></i>
+            <%# <div class='support-name'>プロジェクトを支援する</div> %>
           </div>
           <div class='btn-favorite'>
             <div class='favorite'>お気に入り</div>
@@ -59,10 +60,10 @@
   <div class='show-container'>
 
     <div class='main-container'>
-    <div class='home'>
-      <h1>本文内容</h1>
-    </div>
-
+      <div class='home'>
+        <h1>本文内容</h1>
+        <%= @item.text %>
+      </div>
     </div>
 
     <div class='side-container'>

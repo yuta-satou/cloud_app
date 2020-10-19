@@ -1,0 +1,15 @@
+<%= render "items/header" %>
+<div class='new-container'> 
+  <h1 class='new-page-title'>支援する</h1>
+  <div class='new-form'>
+    <%= form_with model: @order, url: item_orders_path, local: true do |form| %>
+      <div>
+        <%= form.label :price, '金額' %>
+        <%= form.text_field :price, placeholder: "金額" %>
+      </div>
+      <%= form.submit "送信" %>
+    <% end %>
+  </div>
+</div>
+
+<%= render "items/footer" %>
