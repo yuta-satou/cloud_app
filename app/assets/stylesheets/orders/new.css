@@ -224,6 +224,10 @@ input[type=checkbox] {
   margin-right: 10px;
 }
 
+.support-comment{
+  margin-bottom: 40px;
+}
+
 
 .order-btn{
   text-align: center;
@@ -257,7 +261,6 @@ input[type=checkbox] {
 .order-project-container{
   width: 72%;
   height: 500px;
-  /* background-color: blueviolet; */
   margin: auto;
 }
 .order-project-container h2{

@@ -28,7 +28,8 @@
 
 
 .show-container{
-  width: 80vw;
+  /* width: 80vw; */
+  width: 1150px;
   display: flex;
   margin: auto;
 }
@@ -138,25 +139,30 @@
 
 
 .support-box{
-  width: 90%;
+  width: 85%;
   margin: auto;
 }
 .btn-support{
-  display: inline-block;
-  padding: 25px 30px;
   background-color: rgb(252, 79, 79);
   margin-bottom: 20px;
   box-shadow: 0px 5px 5px 0px rgba(255, 46, 46, 0.5);
+  cursor: pointer;
 }
+
+.btn-support:hover{
+  opacity: 0.7;
+}
+
 .support-name{
+  display: inline-block;
   color: white;
   font-size: 20px;
   text-align: center;
+  padding: 20px 25px;
 }
 
 .fa-chevron-circle-right{
-  margin-left: 15px;
-  font-size:1.1em;
+  font-size:1.2em;
 }
 
 
