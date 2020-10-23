@@ -1,14 +1,134 @@
 <%= render "items/header" %>
-<div class='new-container'> 
-  <h1 class='new-page-title'>支援する</h1>
-  <div class='new-form'>
-    <%= form_with model: @order, url: item_orders_path, local: true do |form| %>
-      <div>
-        <%= form.label :price, '金額' %>
-        <%= form.text_field :price, placeholder: "金額" %>
+
+<div class='order-new-page'>
+  <h1 class='order-new-title'>リターンを選択し、必要情報を入力してください</h1>
+  <div class='order-new-container'>
+    <div class='order-new-main'>
+      
+      <div class='price-box'>
+        <ul>
+          <li class='price-box-list'>
+            <div class='price-list'>
+              <div class='price-content'>
+                <div class="price-check-box">
+                  <%= check_box_tag :check %>
+                  <%= label_tag :check, '18000円', class:'price-check' %>
+                </div>
+                <div class='price-description'>
+                  お礼メッセージ
+                  ご支援いただいた方に、心からのお礼をお送りさせていただきます。
+                  ※支援時、必ず備考欄にご希望のお名前をご記入ください。
+                </div>
+                <div class="price-detail">
+                  <div class="price-support-person"><i class="fas fa-user"></i>支援者：298人</div>
+                  <div class="send-plan"><i class="fa fa-truck"></i>お届け予定：2021年01月</div>
+                </div>
+              </div>
+              <div class='price-image-box'>
+                <%= image_tag "cat-1941089_1280.jpg", class: 'price-image' %>
+              </div>
+            </div>
+          </li>
+
+          <li class='price-box-list'>
+            <div class='price-list'>
+              <div class='price-content'>
+                <div class="price-check-box">
+                  <%= check_box_tag :check %>
+                  <%= label_tag :check, '18000円', class:'price-check' %>
+                </div>
+                <div class='price-description'>
+                  お礼メッセージ
+                  ご支援いただいた方に、心からのお礼をお送りさせていただきます。
+                  ※支援時、必ず備考欄にご希望のお名前をご記入ください。
+                </div>
+                <div class="price-detail">
+                  <div class="price-support-person"><i class="fas fa-user"></i>支援者：298人</div>
+                  <div class="send-plan"><i class="fa fa-truck"></i>お届け予定：2021年01月</div>
+                </div>
+              </div>
+              <div class='price-image-box'>
+                <%= image_tag "cat-1941089_1280.jpg", class: 'price-image' %>
+              </div>
+            </div>
+          </li>
+          
+        </ul>
       </div>
-      <%= form.submit "送信" %>
-    <% end %>
+
+
+      <div class='order-new-form'>
+        <%= form_with model: @order, url: item_orders_path, id: 'charge-form', class: 'card-form', local: true do |form| %>
+          <h2>支援金額</h2>
+          <div class='order-price'>
+            <div class="price-total">
+              <h2>合計 1000円</h2>
+            </div>
+            <div class="price-addition">
+              <%= form.label :price, '上乗せして支援する', class:'price-addition-check' %>
+              <%= form.text_field :price, placeholder: "金額" %>
+            </div>
+          </div>
+          <h2>クレジットカード情報入力</h2>
+          <div class="card-container">
+            
+            <div class='card-information'>
+              <div class='card-number'>
+                <p>クレジットカード番号</p>
+                <%= form.text_field :number, class:"numbers", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
+                <div class="available-card">
+                  <%= image_tag "card-mastercard.gif", class: 'card-image'%>
+                  <%= image_tag "card-visa.gif", class: 'card-image'%>
+                  <%= image_tag "card-jcb.gif", class: 'card-image'%>
+                  <%= image_tag "card-amex.gif", class: 'card-image'%>
+                </div>
+              </div>
+              <div class='card-cvc'>
+                <p>セキュリティコード</p>
+                <%= form.text_field :cvc, class:"cvc", placeholder:"3桁の番号", maxlength:"4" %>
+              </div>
+              <div class='expiration-date'>
+                <p>有効期限</p>
+                <div class='expiration-date-name'>
+                  <%= form.text_field :exp_month, class:"exp_month", placeholder:"月" %>
+                  <%= form.text_field :exp_year, class:"exp_year", placeholder:"年" %>
+                </div>          
+              </div>
+            </div>
+          </div>
+          <h2>応援コメント</h2>
+          <div class='support-comment'>
+            <%= form.text_area :comment, placeholder: "コメント", size:'85x5' %>          
+          </div>
+
+
+
+
+          <div class='order-btn'>
+            <%= form.submit "支援する", class:"order-new-btn" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class='order-new-side'>
+      <div class="order-project-container">
+        <h2>支援者になるプロジェクト</h2>
+        <div class='new-project-list'>
+          <%= image_tag "cat-1941089_1280.jpg", class: 'new-project-image'%>
+          <h1 class='new-project-name'>listプロジェクト名</h1>
+          <div class='new-project-tag'>
+            <div class='project-tag-name'><i class="fas fa-tags"></i>フード・飲食</div>
+            <div class='project-tag-name'><i class="fas fa-tags"></i>動物・植物</div>
+          </div>
+          <div class='new-project-detail'>
+            <div class='new-project-amount'>現在<span>540,000円</span></div>
+            <div class='new-project-support'>支援者<span>120人</span></div>
+            <div class='new-project-day'>残り<span>12日</span></div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
   </div>
 </div>
 
