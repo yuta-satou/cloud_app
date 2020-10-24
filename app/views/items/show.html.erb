@@ -3,7 +3,7 @@
 <div class='show-top-page'>
   <h1 class='show-page-title'><%= @item.title %></h1>
   <ul class='show-tag'>
-    <li class='show-tag-list'><i class="fas fa-tags"></i><%= @item.tag %></li>
+    <li class='show-tag-list'><i class="fas fa-tags"></i><%= @item.tag.name %></li>
     <li class='show-tag-list'><i class="fas fa-tags"></i>動物・植物</li>
   </ul>
   <div class='show-container'>
@@ -27,7 +27,7 @@
         <div class='total-inner'>
           <div class='backer-amount'>
             <h5><span>¥</span> 現在の支援総額</h5>
-            <strong><%= @item.target_amount %>円</strong>
+            <strong><%= @item.start_amount %>円</strong>
             <div>目標金額は<%= @item.target_amount %>円</div>
           </div>
         </div>
@@ -37,7 +37,7 @@
         </div>
         <div class='recruitment-end'>
           <div class='recruitment-end-number'><i class="far fa-clock"></i>募集終了まで残り</div>
-          <div class='number'><%= @item.days %>日</div>
+          <div class='number'><%= @item.day.name %></div>
         </div>
 
         <div class='support-box'>
@@ -60,8 +60,7 @@
 
     <div class='main-container'>
       <div class='home'>
-        <h1>本文内容</h1>
-        <%= @item.text %>
+        <%= @item.content %>
       </div>
     </div>
 

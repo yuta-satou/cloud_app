@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     pay_item
     @order.save
-    @item.target_amount = @item.target_amount + @order.price
+    @item.start_amount = @item.start_amount + @order.price
     @item.save
 
     return redirect_to root_path

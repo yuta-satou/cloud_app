@@ -16,9 +16,9 @@
         <%= form.label :sub_title, 'サブタイトル' %>
         <%= form.text_field :sub_title, placeholder: "サブタイトル" %>
       </div>
-      <div>
-        <%= form.label :text, '本文' %>
-        <%= form.text_area :text, placeholder: "文章を入力してください。" %>
+      <div class='content-style'>
+        <%= form.label :content, '本文' %>
+        <%= form.rich_text_area :content, placeholder: "文章を入力してください。" %>
       </div>
 
       <div>
@@ -27,15 +27,14 @@
       </div>
 
       <div>
-        <%= form.label :days, '日数' %>
-        <%= form.text_field :days, placeholder: "日数" %>
+        <%= form.label :day_id, '募集終了日数' %>
+        <%= form.collection_select(:day_id, Day.all, :id, :name, {}, {class:"day-select"}) %>
       </div>
 
       <div>
-        <%= form.label :tag, 'タグ' %>
-        <%= form.text_field :tag, placeholder: "タグ" %>
+        <%= form.label :tag_id, 'タグ' %>
+        <%= form.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"tag-select"}) %>
       </div>
-
       <%= form.submit "送信" %>
     <% end %>
   </div>

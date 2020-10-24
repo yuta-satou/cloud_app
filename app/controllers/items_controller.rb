@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def index 
     @items = Item.all
-    @item = Item.find(2)
+    @item = Item.find(3)
   end
 
   def new
@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.start_amount = 0
     if @item.valid?
       @item.save
       return redirect_to root_path
@@ -25,7 +26,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :title, :sub_title, :text, :target_amount, :days, :tag)
+    params.require(:item).permit(:image, :title, :sub_title, :content, :target_amount, :start_amount, :day_id, :tag_id)
   end
 
 end
