@@ -49,7 +49,11 @@
             <% end %>
           </div>
           <div class='btn-favorite'>
-            <div class='favorite'>お気に入り</div>
+            <% if user_signed_in? && current_user.id == @item.id %>
+              <%= link_to '削除', item_path(@item.id), method: :delete, class:'favorite' %>
+            <% else %>  
+              <div class='favorite'>お気に入り</div>
+            <% end %>
           </div>
         </div>
       </div>
