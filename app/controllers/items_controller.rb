@@ -1,11 +1,19 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:edit, :update, :show, :destroy]
   def index 
     @items = Item.all
-    @item = Item.find(3)
+    @item = Item.find(1)
   end
 
   def new
-    @item = Item.new
+    if user_signed_in?
+      @item = Item.new
+      value = Item.find(1)
+      # サンプル本文を出力する
+      @item.content = value.content
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
@@ -19,14 +27,22 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-    @item = Item.find(params[:id])
+  def update
+    if @item.update(item_params)
+      return redirect_to item_path(@item.id)
+    else
+      render :edit
+    end
   end
 
   private
 
   def item_params
-    params.require(:item).permit(:image, :title, :sub_title, :content, :target_amount, :start_amount, :day_id, :tag_id)
+    params.require(:item).permit(:image, :title, :sub_title, :content, :target_amount, :start_amount, :day_id, :tag_id).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
 end
