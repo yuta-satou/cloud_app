@@ -1,42 +1,79 @@
 
 <%= render "items/header" %>
-<div class='new-container'> 
+<div class='new-page'>
+  <div class="new-container">
   <h1 class='new-page-title'>プロジェクト編集</h1>
-  <div class='new-form'>
     <%= form_with(model: @item, local: true) do |form| %>
-    <div>
-      <%= form.file_field :image, id:"item-image" %>
-    </div>
-      <div>
-        <%= form.label :title, 'タイトル' %>
-        <%= form.text_field :title, placeholder: "タイトル" %>
-      </div>
+      <div class='overview-wrapper'>
+        <div class="form-group">
+          <div class='form-header'>
+          <%= form.label :title, 'タイトル' %>
+          </div>
+          <div class="form-body">
+            <%= form.text_field :title, placeholder: "あなただけのオリジナルタイトルを設定してください", class:"form-body-title"%>
+          </div>
+        </div>
 
-      <div>
-        <%= form.label :sub_title, 'サブタイトル' %>
-        <%= form.text_field :sub_title, placeholder: "サブタイトル" %>
-      </div>
-      <div class='content-style'>
-        <%= form.label :content, '本文' %>
-        <%= form.rich_text_area :content, placeholder: "文章を入力してください。" %>
-      </div>
+        <div class="form-group">
+          <div class="form-header">
+            <%= form.label :sub_title, '概要文' %>
+          </div>
+          <div class="form-body">
+            <%= form.text_area :sub_title, placeholder: "３行程度で概要をまとめましょう", class:'form-body-subtitle'%>
+          </div>
+        </div>
 
-      <div>
-        <%= form.label :target_amount, '目標金額' %>
-        <%= form.text_field :target_amount, placeholder: "目標金額" %>
-      </div>
+        <div class="form-group">
+          <div class="form-header">
+            <%= form.label :sub_title, 'メイン画像' %>
+          </div>
+          <div class="form-body">
+            <%= form.file_field :image, id:"item-image", class:"form-body-image" %>
+          </div>
+        </div>
 
-      <div>
-        <%= form.label :day_id, '募集終了日数' %>
-        <%= form.collection_select(:day_id, Day.all, :id, :name, {}, {class:"day-select"}) %>
-      </div>
+        <div class="form-group">
+          <div class="form-header">
+            <%= form.label :content, '本文' %>
+          </div>
+          <div class="form-body">
+            <div class="form-body-line">
+              <%= form.rich_text_area :content %>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="form-header">
+            <%= form.label :target_amount, '目標金額' %>
+          </div>
+          <div class="form-body">
+            <%= form.text_field :target_amount, placeholder: "目標金額", class:"form-body-amount" %>円
+          </div>
+        </div>
 
-      <div>
-        <%= form.label :tag_id, 'タグ' %>
-        <%= form.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"tag-select"}) %>
+        <div class="form-group">
+          <div class="form-header">
+            <%= form.label :day_id, '募集終了日数' %>
+          </div>
+          <div class="form-body">
+            <%= form.collection_select(:day_id, Day.all, :id, :name, {}, {class:"day-select"}) %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-header">
+            <%= form.label :tag_id, 'カテゴリ' %>
+          </div>
+          <div class="form-body">
+            <%= form.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"tag-select"}) %>
+          </div>
+        </div>
       </div>
-      <%= form.submit "送信" %>
-    <% end %>
+      <div class="item-btn">
+        <%= form.submit "保存", class:'item-new-btn' %>
+      </div>
+      <% end %>
   </div>
 </div>
 

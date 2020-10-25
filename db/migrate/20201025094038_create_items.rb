@@ -8,6 +8,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :start_amount,         null: false
       t.integer :day_id,               null: false
       t.integer :tag_id,               null: false
+      t.references :user,              null: false,foreign_key: true
       t.timestamps
     end
   end
