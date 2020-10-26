@@ -6,6 +6,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.text :content
       t.integer :target_amount,        null: false
       t.integer :start_amount,         null: false
+      t.integer :person_num,           null: false
       t.integer :day_id,               null: false
       t.integer :tag_id,               null: false
       t.references :user,              null: false,foreign_key: true

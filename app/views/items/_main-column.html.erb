@@ -4,7 +4,7 @@
     <h2 class='pickup-project-name'><%= @item.title %></h2>
     <div class='projects'>
       <div class='project-amount'>現在<span><%= @item.start_amount %>円</span></div>
-      <div class='project-support'>支援者<span>790人</span></div>
+      <div class='project-support'>支援者<span><%= @item.person_num %>人</span></div>
       <div class='project-day'>残り<span><%= @item.day.name %></span></div>
     </div>
   </div>

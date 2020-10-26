@@ -20,7 +20,7 @@
                   ※支援時、必ず備考欄にご希望のお名前をご記入ください。
                 </div>
                 <div class="price-detail">
-                  <div class="price-support-person"><i class="fas fa-user"></i>支援者：298人</div>
+                  <div class="price-support-person"><i class="fas fa-user"></i>支援者：<%= @item.person_num %>人</div>
                   <div class="send-plan"><i class="fa fa-truck"></i>お届け予定：2021年01月</div>
                 </div>
               </div>
@@ -43,7 +43,7 @@
                   ※支援時、必ず備考欄にご希望のお名前をご記入ください。
                 </div>
                 <div class="price-detail">
-                  <div class="price-support-person"><i class="fas fa-user"></i>支援者：298人</div>
+                  <div class="price-support-person"><i class="fas fa-user"></i>支援者：<%= @item.person_num %>人</div>
                   <div class="send-plan"><i class="fa fa-truck"></i>お届け予定：2021年01月</div>
                 </div>
               </div>
@@ -62,7 +62,7 @@
           <h2>支援金額</h2>
           <div class='order-price'>
             <div class="price-total">
-              <h2>合計 1000円</h2>
+              <h2>合計 0円</h2>
             </div>
             <div class="price-addition">
               <%= form.label :price, '上乗せして支援する', class:'price-addition-check' %>
@@ -111,15 +111,15 @@
         <h2>支援者になるプロジェクト</h2>
         <div class='new-project-list'>
           <%= image_tag "cat-1941089_1280.jpg", class: 'new-project-image'%>
-          <h1 class='new-project-name'>listプロジェクト名</h1>
+          <h1 class='new-project-name'><%= @item.title %></h1>
           <div class='new-project-tag'>
-            <div class='project-tag-name'><i class="fas fa-tags"></i>フード・飲食</div>
+            <div class='project-tag-name'><i class="fas fa-tags"></i><%= @item.tag.name %></div>
             <div class='project-tag-name'><i class="fas fa-tags"></i>動物・植物</div>
           </div>
           <div class='new-project-detail'>
-            <div class='new-project-amount'>現在<span>540,000円</span></div>
-            <div class='new-project-support'>支援者<span>120人</span></div>
-            <div class='new-project-day'>残り<span>12日</span></div>
+            <div class='new-project-amount'>現在<span><%= @item.start_amount %>円</span></div>
+            <div class='new-project-support'>支援者<span><%= @item.person_num %>人</span></div>
+            <div class='new-project-day'>残り<span><%= @item.day.name %></span></div>
           </div>
         </div>
       </div>

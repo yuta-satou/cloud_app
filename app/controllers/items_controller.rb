@@ -19,6 +19,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.start_amount = 0
+    @item.person_num = 0
     if @item.valid?
       @item.save
       return redirect_to root_path
@@ -33,6 +34,10 @@ class ItemsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
+    @orders = Order.all
   end
 
   def destroy
