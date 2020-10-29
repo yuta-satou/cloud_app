@@ -12,7 +12,7 @@
       <%= image_tag @item.image, class: 'show-item-image' %>
       <div class='sub-title'><%= @item.sub_title %></div>
       <div class='btn-code'>
-        タグ一覧
+        
       </div>
       <ul class='contents-list'>
         <li>ホーム</li>
@@ -37,7 +37,7 @@
         </div>
         <div class='recruitment-end'>
           <div class='recruitment-end-number'><i class="far fa-clock"></i>募集終了まで残り</div>
-          <div class='number'><%= @item.day.name %></div>
+          <div class='number'><%= @item.remaining_days %>日</div>
         </div>
 
         <div class='support-box'>
@@ -71,12 +71,14 @@
         <%= @item.content %>
 
         <%# 支援者リスト表示 %>
-        <% @orders.each do |order| %>
-          <% if order.item_id == @item.id %>
-            <h1><%= order.user.nickname %><h1>
-          <% end %> 
+        <% @users.each do |user| %>
+          <% @orders.each do |order| %>
+            <% if order.user_id == user.id %>
+              <h1><%= order.user.nickname %><h1>
+              <% break %>
+            <% end %>    
+          <% end %>   
         <% end %>
-
       </div>
     </div>
 

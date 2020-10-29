@@ -1,6 +1,10 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :show, :destroy]
   def index 
+    Item.find_each do |item|
+      day_count = (item.day_id - Date.today).to_i
+      item.update(remaining_days: day_count)
+    end
     @items = Item.all
     @item = Item.find(1)
   end
@@ -20,6 +24,10 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.start_amount = 0
     @item.person_num = 0
+    @item.remaining_days = (@item.day_id - Date.today).to_i
+    if @item.day_id < Date.today
+      render :new
+    end
     if @item.valid?
       @item.save
       return redirect_to root_path
@@ -38,6 +46,8 @@ class ItemsController < ApplicationController
 
   def show
     @orders = Order.all
+    @users = User.all
+    @item.remaining_days = (@item.day_id - Date.today).to_i
   end
 
   def destroy
@@ -51,7 +61,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :title, :sub_title, :content, :target_amount, :start_amount, :day_id, :tag_id).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :title, :sub_title, :content, :target_amount, :start_amount, :day_id, :remaining_days, :tag_id).merge(user_id: current_user.id)
   end
 
   def set_item

@@ -1,16 +1,24 @@
 class OrdersController < ApplicationController
 
   def new
-    @order = Order.new
-    @item = Item.find(params[:item_id])
+    if user_signed_in?
+      @order = Order.new
+      @item = Item.find(params[:item_id])
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
     @order = Order.new(order_params)
     pay_item
-    @order.save
-    item_count
-    return redirect_to root_path
+    if @order.valid?
+      @order.save
+      item_count
+      return redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
@@ -33,8 +41,10 @@ class OrdersController < ApplicationController
     @item = Item.find(params[:item_id])
     @item.start_amount = @item.start_amount + @order.price
     orders = Order.all
+    # @item.person_num += 1
+    
     orders.each do |order|
-      if order.user_id != @order.user_id
+      if order.user_id == @order.user_id
         @item.person_num += 1
       end
     end

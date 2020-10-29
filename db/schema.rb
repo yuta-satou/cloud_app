@@ -50,7 +50,8 @@ ActiveRecord::Schema.define(version: 2020_10_25_094424) do
     t.integer "target_amount", null: false
     t.integer "start_amount", null: false
     t.integer "person_num", null: false
-    t.integer "day_id", null: false
+    t.date "day_id", null: false
+    t.integer "remaining_days", null: false
     t.integer "tag_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

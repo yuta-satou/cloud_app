@@ -54,10 +54,10 @@
 
         <div class="form-group">
           <div class="form-header">
-            <%= form.label :day_id, '募集終了日数' %>
+            <%= form.label :day_id, '募集終了日' %>
           </div>
           <div class="form-body">
-            <%= form.collection_select(:day_id, Day.all, :id, :name, {}, {class:"day-select"}) %>
+            <%= form.date_field :day_id, class:"day-select" %>
           </div>
         </div>
 
