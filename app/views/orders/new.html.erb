@@ -11,7 +11,7 @@
               <div class='price-content'>
                 <div class="price-check-box">
                   <%= check_box_tag :check, id:'price-check' %>
-                  <%= label_tag :check, '18000円', class:'price-check' %>
+                  <%= label_tag :check, '500円', class:'price-check' %>
                 </div>
                 <div class='price-description'>
                   お礼メッセージ
@@ -34,7 +34,7 @@
               <div class='price-content'>
                 <div class="price-check-box">
                   <%= check_box_tag :check, id:'price-check' %>
-                  <%= label_tag :check, '18000円', class:'price-check' %>
+                  <%= label_tag :check, '8000円', class:'price-check' %>
                 </div>
                 <div class='price-description'>
                   お礼メッセージ
@@ -109,7 +109,7 @@
       <div class="order-project-container">
         <h2>支援者になるプロジェクト</h2>
         <div class='new-project-list'>
-          <%= image_tag "cat-1941089_1280.jpg", class: 'new-project-image'%>
+          <%= image_tag @item.image, class: 'new-project-image'%>
           <h1 class='new-project-name'><%= @item.title %></h1>
           <div class='new-project-tag'>
             <div class='project-tag-name'><i class="fas fa-tags"></i><%= @item.tag.name %></div>

@@ -1,14 +1,14 @@
 
 .footer{
   width: 100vw;
-  height: 60vh;
+  height: 350px;
   background-color: rgb(65, 65, 65);
   
 }
 
 .footer-contents{
   display: flex;
-  height: 60vh;
+  height: 350px;
 }
 
 .cloud-details01,.cloud-details02,.cloud-details03{
@@ -19,9 +19,9 @@
   flex-basis:25%;  
 }
 .cloud-details02{
+  flex-basis:50%;
   border-left: solid 1px rgb(131, 130, 130);
   border-right: solid 1px rgb(131, 130, 130);
-  flex-basis:50%;
 }
 .cloud-details03{
   flex-basis:25%;  
@@ -35,10 +35,27 @@
 .footer-title{
   font-size: 14px;
   margin-left: 20px;
+  margin-bottom: 10px;
+  color: rgb(182, 182, 182);
 }
 
 .footer-link{
   font-size: 12px;
   color: white;
   margin-left: 20px;
+}
+
+
+.footer-copyright{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(252, 252, 252);
+}
+
+.copyright-name{
+  font-size: 14px;
+  color: rgb(101, 101, 101);
 }

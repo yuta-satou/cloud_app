@@ -18,10 +18,10 @@ window.addEventListener('load', function(){
   checkbox[0].addEventListener('change', function(){
     if (checkbox[0].checked){
       console.log(18000);
-      revenue += parseInt(18000);
+      revenue += parseInt(500);
     }else{
       console.log(0);
-      revenue -= parseInt(18000);
+      revenue -= parseInt(500);
     }
     revenue_sum = revenue_num + revenue;
     document.getElementById( "price-sum" ).innerHTML = revenue_sum.toLocaleString();
@@ -30,10 +30,10 @@ window.addEventListener('load', function(){
   checkbox[1].addEventListener('change', function(){
     if (checkbox[1].checked){
       console.log(18000);
-      revenue += parseInt(18000);
+      revenue += parseInt(8000);
     }else{
       console.log(0);
-      revenue -= parseInt(18000);
+      revenue -= parseInt(8000);
     }
     revenue_sum = revenue_num + revenue;
     document.getElementById( "price-sum" ).innerHTML = revenue_sum.toLocaleString();
