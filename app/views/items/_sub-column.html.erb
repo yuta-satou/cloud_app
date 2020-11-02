@@ -13,7 +13,11 @@
           <div class='new-project-detail'>
             <div class='new-project-amount'>現在<span><%= item.start_amount %>円</span></div>
             <div class='new-project-support'>支援者<span><%= item.person_num %>人</span></div>
-            <div class='new-project-day'>残り<span><%= item.remaining_days %>日</span></div>
+            <% if item.remaining_days > 0 %>
+              <div class='new-project-day'>残り<span><%= item.remaining_days %>日</span></div>
+            <% else %>
+              <div class='new-project-day'><span>募集期間終了</span></div>
+            <% end %>
           </div>
         </li>
       <% end %>

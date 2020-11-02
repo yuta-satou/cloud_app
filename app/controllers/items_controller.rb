@@ -6,15 +6,11 @@ class ItemsController < ApplicationController
       item.update(remaining_days: day_count)
     end
     @items = Item.all
-    @item = Item.find(1)
   end
 
   def new
     if user_signed_in?
       @item = Item.new
-      value = Item.find(1)
-      # サンプル本文を出力する
-      @item.content = value.content
     else
       redirect_to new_user_session_path
     end

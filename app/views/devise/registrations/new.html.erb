@@ -5,8 +5,7 @@
   <div class="container">
     <h2 class='registration-title'>新規登録</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-
+      <%= render 'devise/shared/error_messages', model: f.object %>
       <div class="field">
         <%= f.label :nickname, 'ユーザー名' %><br/>
         <%= f.text_field :nickname, autofocus: true %>
@@ -63,7 +62,6 @@
       <%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post%>
     <% end %>
 
-    <%# render "devise/shared/links" %>
   </div>
 </div>
 

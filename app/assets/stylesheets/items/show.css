@@ -28,8 +28,7 @@
 
 
 .show-container{
-  /* width: 80vw; */
-  width: 1150px;
+  width: 85vw;
   display: flex;
   margin: auto;
 }
@@ -142,6 +141,11 @@
   margin: auto;
 }
 .btn-support{
+  width: 280px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(252, 79, 79);
   margin-bottom: 20px;
   box-shadow: 0px 5px 5px 0px rgba(255, 46, 46, 0.5);
@@ -153,22 +157,23 @@
 }
 
 .support-name{
-  display: inline-block;
   color: white;
   font-size: 20px;
-  text-align: center;
-  padding: 20px 25px;
 }
 
 .fa-chevron-circle-right{
   font-size:1.2em;
+  margin-left: 10px;
 }
 
 
 
 .btn-favorite{
-  display: inline-block;
-  padding: 10px 120px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.351);
   margin-bottom: 20px;
   border: solid 1px rgb(205, 205, 205);
@@ -177,7 +182,6 @@
 .favorite{
   color: rgb(92, 92, 92);
   font-size: 16px;
-  text-align: center;
 }
 
 
@@ -246,7 +250,6 @@
 
 .return-detail{
   width: 80%;
-  /* background-color: rgb(255, 175, 175); */
   margin: auto;
 }
 
@@ -286,9 +289,6 @@
 
 .btn-return:hover{
   opacity: 0.7;
-}
-.return-link{
-  color: rgb(252, 252, 252);
 }
 
 
