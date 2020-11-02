@@ -3,7 +3,6 @@
   width: 100vw;
   margin-top: 70px;
   padding-top: 40px;
-  /* background-color: rgb(244, 244, 244); */
 }
 
 .new-page-title{
@@ -17,14 +16,12 @@
 .new-container{
   width: 800px;
   margin: auto;
-  /* background-color: rgb(242, 255, 230); */
 }
 
 .overview-wrapper{
   width: 100%;
   margin: 40px auto;
   border-bottom: 1px solid rgb(222, 222, 222);
-  /* background-color: rgb(228, 228, 228); */
 }
 
 
@@ -34,7 +31,6 @@
   height: 100%;
   display: flex;
   align-items: center;
-  /* background-color: rgb(255, 214, 199); */
   margin-bottom: 40px;
 }
 

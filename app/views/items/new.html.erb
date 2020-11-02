@@ -4,6 +4,7 @@
   <div class="new-container">
   <h1 class='new-page-title'>プロジェクト編集</h1>
     <%= form_with(model: @item, local: true) do |form| %>
+      <%= render 'devise/shared/error_messages', model: form.object %>
       <div class='overview-wrapper'>
         <div class="form-group">
           <div class='form-header'>

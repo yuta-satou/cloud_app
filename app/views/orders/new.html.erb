@@ -4,14 +4,13 @@
   <h1 class='order-new-title'>リターンを選択し、必要情報を入力してください</h1>
   <div class='order-new-container'>
     <div class='order-new-main'>
-      
       <div class='price-box'>
         <ul>
           <li class='price-box-list'>
             <div class='price-list'>
               <div class='price-content'>
                 <div class="price-check-box">
-                  <%= check_box_tag :check %>
+                  <%= check_box_tag :check, id:'price-check' %>
                   <%= label_tag :check, '18000円', class:'price-check' %>
                 </div>
                 <div class='price-description'>
@@ -34,7 +33,7 @@
             <div class='price-list'>
               <div class='price-content'>
                 <div class="price-check-box">
-                  <%= check_box_tag :check %>
+                  <%= check_box_tag :check, id:'price-check' %>
                   <%= label_tag :check, '18000円', class:'price-check' %>
                 </div>
                 <div class='price-description'>
@@ -52,21 +51,21 @@
               </div>
             </div>
           </li>
-          
         </ul>
       </div>
 
 
       <div class='order-new-form'>
         <%= form_with model: @order, url: item_orders_path, id: 'charge-form', class: 'card-form', local: true do |form| %>
+          <%= render 'devise/shared/error_messages', model: form.object %>
           <h2>支援金額</h2>
           <div class='order-price'>
             <div class="price-total">
-              <h2>合計 0円</h2>
+              <h2>合計 <span id='price-sum'></span>円</h2>
             </div>
             <div class="price-addition">
-              <%= form.label :price, '上乗せして支援する', class:'price-addition-check' %>
-              <%= form.text_field :price, placeholder: "金額" %>
+              <%= form.label '上乗せして支援する', class:'price-addition-check' %>
+              <%= form.text_field :price, id:'item-price' %>
             </div>
           </div>
           <h2>クレジットカード情報入力</h2>
@@ -119,7 +118,7 @@
           <div class='new-project-detail'>
             <div class='new-project-amount'>現在<span><%= @item.start_amount %>円</span></div>
             <div class='new-project-support'>支援者<span><%= @item.person_num %>人</span></div>
-            <div class='new-project-day'>残り<span><%= @item.day_id %></span></div>
+            <div class='new-project-day'>残り<span><%= @item.remaining_days %>日</span></div>
           </div>
         </div>
       </div>

@@ -11,8 +11,10 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    pay_item
+    price_id = params[:price_id]
+    @order.price = price_id
     if @order.valid?
+      pay_item
       @order.save
       item_count
       return redirect_to root_path
@@ -25,31 +27,24 @@ class OrdersController < ApplicationController
 
   def order_params
     @item = Item.find(params[:item_id])
-    params.require(:order).permit(:price).merge(user_id: current_user.id, item_id: @item.id,token: params[:token])
+    params.require(:order).permit(:price).merge(user_id: current_user.id, item_id: @item.id, token: params[:token], price_id: params[:price_id])
+
   end
 
   def pay_item
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
-      amount: order_params[:price],  # 商品の値段
-      card: order_params[:token],    # カードトークン
-      currency: 'jpy'                 # 通貨の種類（日本円）
+      amount: order_params[:price],
+      card: order_params[:token], 
+      currency: 'jpy' 
     )
   end
 
   def item_count
     @item = Item.find(params[:item_id])
     @item.start_amount = @item.start_amount + @order.price
-    orders = Order.all
-    # @item.person_num += 1
-    
-    orders.each do |order|
-      if order.user_id == @order.user_id
-        @item.person_num += 1
-      end
-    end
+    @item.person_num += 1
     @item.save
   end
-
 
 end

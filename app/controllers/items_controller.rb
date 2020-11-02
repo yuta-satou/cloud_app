@@ -22,13 +22,14 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    @item.start_amount = 0
-    @item.person_num = 0
-    @item.remaining_days = (@item.day_id - Date.today).to_i
-    if @item.day_id < Date.today
-      render :new
-    end
+    
     if @item.valid?
+      if @item.day_id < Date.today
+        render :new
+      end
+      @item.start_amount = 0
+      @item.person_num = 0
+      @item.remaining_days = (@item.day_id - Date.today).to_i
       @item.save
       return redirect_to root_path
     else
