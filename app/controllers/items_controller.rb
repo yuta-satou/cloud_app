@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :show, :destroy]
+
+  
   def index 
     Item.find_each do |item|
       day_count = (item.day_id - Date.today).to_i
@@ -18,7 +20,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    
     if @item.valid?
       if @item.day_id < Date.today
         render :new

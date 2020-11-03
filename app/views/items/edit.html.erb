@@ -6,7 +6,8 @@
       <div class='overview-wrapper'>
         <div class="form-group">
           <div class='form-header'>
-          <%= form.label :title, 'タイトル' %>
+            <%= form.label :title, 'タイトル' %>
+            <span class="indispensable">必須</span>
           </div>
           <div class="form-body">
             <%= form.text_field :title, placeholder: "あなただけのオリジナルタイトルを設定してください", class:"form-body-title"%>
@@ -16,6 +17,7 @@
         <div class="form-group">
           <div class="form-header">
             <%= form.label :sub_title, '概要文' %>
+            <span class="indispensable">必須</span>
           </div>
           <div class="form-body">
             <%= form.text_area :sub_title, placeholder: "３行程度で概要をまとめましょう", class:'form-body-subtitle'%>
@@ -25,6 +27,7 @@
         <div class="form-group">
           <div class="form-header">
             <%= form.label :sub_title, 'メイン画像' %>
+            <span class="indispensable">必須</span>
           </div>
           <div class="form-body">
             <%= form.file_field :image, id:"item-image", class:"form-body-image" %>
@@ -45,6 +48,7 @@
         <div class="form-group">
           <div class="form-header">
             <%= form.label :tag_id, 'カテゴリ' %>
+            <span class="indispensable">必須</span>
           </div>
           <div class="form-body">
             <%= form.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"tag-select"}) %>
