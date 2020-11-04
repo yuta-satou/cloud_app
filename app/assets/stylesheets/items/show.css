@@ -312,3 +312,24 @@
 
 
 
+.trix-content strong{
+  font-weight: bold;
+}
+.trix-content em{
+  font-style: italic;
+}
+
+.trix-content strong em{
+  font-weight: bold;
+  font-style: italic;
+}
+
+.trix-content ol{
+  text-indent: 1em;
+  list-style-type: decimal;
+}
+
+.trix-content ul{
+  text-indent: 1em;
+  list-style-type: disc;
+}
