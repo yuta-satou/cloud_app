@@ -38,7 +38,9 @@
 
 
 /* テキストエディタ 追加css ----------- */
-
+.trix-content .attachment__progress{
+  display: none;
+}
 
 .trix-content .attachment--preview{
   text-align: left;
