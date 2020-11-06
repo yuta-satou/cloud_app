@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
   has_one_attached :image
-  has_many :order
+  has_many :orders, dependent: :destroy
   belongs_to :user
   has_rich_text :content
 

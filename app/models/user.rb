@@ -5,9 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
-         has_many :sns_credentials
-         has_many :order
-         has_many :item
+         has_many :sns_credentials, dependent: :destroy
+         has_many :orders, dependent: :destroy
+         has_many :items, dependent: :destroy
         # ユーザー情報の実装条件
         NAME_REGEX = /\A[ぁ-んァ-ン一-龥]+\z/
         NAME_KANA_REGEX = /\A[ァ-ヶー－]+\z/
