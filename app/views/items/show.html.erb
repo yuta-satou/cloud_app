@@ -63,9 +63,20 @@
 <div class='show-content-page'>
   <div class='show-container'>
 
-    <div class='main-container'>
-      <div class='home'>
-        <%= @item.content %>
+    <div class='main-content'>
+      <ul class='tab-group'>
+        <li class='tab tab-A is-active'>ホーム</li>
+        <li class='tab tab-B'>活動報告</li>
+        <li class='tab tab-C'>支援者</li>
+        <li class='tab tab-D'>コメント</li>
+      </ul>
+      <div class="panel-group">
+        <div class="panel tab-A is-show">
+          <%= @item.content %>
+        </div>
+        <div class="panel tab-B">コンテンツ2</div>
+        <div class="panel tab-C">コンテンツ3</div>
+        <div class="panel tab-D">コンテンツ4</div>
       </div>
     </div>
 

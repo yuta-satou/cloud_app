@@ -34,7 +34,6 @@
 }
 
 /* .main-container        */
-
 .main-container{
   width: 55%;
 }
@@ -53,20 +52,6 @@
   padding: 30px;
 }
 
-.contents-list{
-  display: flex;
-  margin-top: 30px;
-}
-
-.contents-list li{
-  font-size: 14px;
-  padding: 15px;
-  margin-left: 5px;
-  color: rgb(109, 109, 109);
-  background-color: rgb(255, 255, 255);
-  border-top: solid 2px rgb(255, 161, 80);
-
-}
 
 /* ------------------------------- */
 
@@ -193,12 +178,67 @@
 }
 
 
-/* .main-container */
+/* .main-content */
 
-.home{
+.main-content{
+  width: 55%;
+}
+
+.tab-group{
+  display: flex;
+}
+
+.tab {
+  font-size: 14px;
+  padding: 15px;
+  color: rgb(109, 109, 109);
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid 2px rgb(255, 239, 225);
+  cursor: pointer;
+}
+
+.tab.is-active{
+  border-bottom: solid 2px rgb(255, 161, 80);
+}
+
+.tab.tab-A{
+  border-radius: 3px;
+}
+
+.tab.tab-B:hover{
+  border-radius: 3px;
+  background-color: rgb(255, 228, 204);
+}
+.tab.tab-C:hover{  
+  border-radius: 3px;
+  background-color: rgb(255, 228, 204);
+}
+.tab.tab-D:hover{
+  border-radius: 3px;
+  background-color: rgb(255, 228, 204);
+}
+
+
+.tab.tab-A:hover{
+  background-color: rgb(255, 228, 204);
+}
+
+
+.panel-group{
   margin-top: 40px;
   background-color: rgb(255, 255, 255);
 }
+
+.panel{
+  display: none;
+}
+
+.panel.is-show{
+  display: block;
+}
+
+
+
 
 
 
@@ -207,7 +247,7 @@
   width: 80%;
   height: 400px;
   background-color: rgb(247, 247, 247);
-  margin: auto;
+  margin: 50px auto;
   text-align: center;
 }
 
