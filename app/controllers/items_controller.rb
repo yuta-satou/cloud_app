@@ -56,6 +56,10 @@ class ItemsController < ApplicationController
     end
   end
 
+  def short_description
+    description[0, 9] + '...'
+  end
+
   private
 
   def item_params
