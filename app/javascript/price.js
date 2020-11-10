@@ -1,4 +1,4 @@
-if (document.URL.match( /new/ ) && document.URL.match( /order/ )){
+if (document.URL.match( /orders/ )){
   window.addEventListener('load', function(){
     const pushUpKey = document.getElementById("item-price");
     let revenue = 0;
@@ -18,7 +18,6 @@ if (document.URL.match( /new/ ) && document.URL.match( /order/ )){
     let checkbox = document.querySelectorAll('input[type="checkbox"]');
     checkbox[0].addEventListener('change', function(){
       if (checkbox[0].checked){
-        console.log(18000);
         revenue += parseInt(500);
       }else{
         console.log(0);
@@ -30,7 +29,6 @@ if (document.URL.match( /new/ ) && document.URL.match( /order/ )){
     })
     checkbox[1].addEventListener('change', function(){
       if (checkbox[1].checked){
-        console.log(18000);
         revenue += parseInt(8000);
       }else{
         console.log(0);
