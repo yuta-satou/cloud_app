@@ -1,6 +1,7 @@
 if (document.URL.match( /orders/ )){
   window.addEventListener('load', function(){
     const pushUpKey = document.getElementById("item-price");
+    let obj = document.getElementsByClassName( "price-box-list" );
     let revenue = 0;
     let revenue_num = 0;
     let revenue_sum = 0;
@@ -19,9 +20,10 @@ if (document.URL.match( /orders/ )){
     checkbox[0].addEventListener('change', function(){
       if (checkbox[0].checked){
         revenue += parseInt(500);
+        obj[0].style.backgroundColor = '#E3FFE8';
       }else{
-        console.log(0);
         revenue -= parseInt(500);
+        obj[0].style.backgroundColor = '#ffffff';
       }
       revenue_sum = revenue_num + revenue;
       document.getElementById( "price-sum" ).innerHTML = revenue_sum.toLocaleString();
@@ -30,9 +32,10 @@ if (document.URL.match( /orders/ )){
     checkbox[1].addEventListener('change', function(){
       if (checkbox[1].checked){
         revenue += parseInt(8000);
+        obj[1].style.backgroundColor = '#E3FFE8';
       }else{
-        console.log(0);
         revenue -= parseInt(8000);
+        obj[1].style.backgroundColor = '#ffffff';
       }
       revenue_sum = revenue_num + revenue;
       document.getElementById( "price-sum" ).innerHTML = revenue_sum.toLocaleString();

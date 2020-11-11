@@ -6,51 +6,55 @@
     <div class='order-new-main'>
       <div class='price-box'>
         <ul>
-          <li class='price-box-list'>
-            <div class='price-list'>
-              <div class='price-content'>
-                <div class="price-check-box">
-                  <%= check_box_tag :check, id:'price-check' %>
-                  <%= label_tag :check, '500円', class:'price-check' %>
+          <%= label_tag :check[0] do %>
+            <li class='price-box-list'>
+              <div class='price-list'>
+                <div class='price-content'>
+                  <div class="price-check-box">
+                    <%= check_box_tag :check[0], id:'price-check' %>
+                    <%= label_tag :check[0], '500円', class:'price-check' %>
+                  </div>
+                  <div class='price-description'>
+                    お礼メッセージ
+                    ご支援いただいた方に、心からのお礼をお送りさせていただきます。
+                    ※支援時、必ず備考欄にご希望のお名前をご記入ください。
+                  </div>
+                  <div class="price-detail">
+                    <div class="price-support-person"><i class="fas fa-user"></i>支援者：<%= @item.person_num %>人</div>
+                    <div class="send-plan"><i class="fa fa-truck"></i>お届け予定：2021年01月</div>
+                  </div>
                 </div>
-                <div class='price-description'>
-                  お礼メッセージ
-                  ご支援いただいた方に、心からのお礼をお送りさせていただきます。
-                  ※支援時、必ず備考欄にご希望のお名前をご記入ください。
-                </div>
-                <div class="price-detail">
-                  <div class="price-support-person"><i class="fas fa-user"></i>支援者：<%= @item.person_num %>人</div>
-                  <div class="send-plan"><i class="fa fa-truck"></i>お届け予定：2021年01月</div>
+                <div class='price-image-box'>
+                  <%= image_tag "cat-1941089_1280.jpg", class: 'price-image' %>
                 </div>
               </div>
-              <div class='price-image-box'>
-                <%= image_tag "cat-1941089_1280.jpg", class: 'price-image' %>
-              </div>
-            </div>
-          </li>
+            </li>
+          <% end %>
 
-          <li class='price-box-list'>
-            <div class='price-list'>
-              <div class='price-content'>
-                <div class="price-check-box">
-                  <%= check_box_tag :check, id:'price-check' %>
-                  <%= label_tag :check, '8000円', class:'price-check' %>
+          <%= label_tag :check[1] do %>
+            <li class='price-box-list'>
+              <div class='price-list'>
+                <div class='price-content'>
+                  <div class="price-check-box">
+                    <%= check_box_tag :check[1], id:'price-check' %>
+                    <%= label_tag :check[1], '8000円', class:'price-check' %>
+                  </div>
+                  <div class='price-description'>
+                    お礼メッセージ
+                    ご支援いただいた方に、心からのお礼をお送りさせていただきます。
+                    ※支援時、必ず備考欄にご希望のお名前をご記入ください。
+                  </div>
+                  <div class="price-detail">
+                    <div class="price-support-person"><i class="fas fa-user"></i>支援者：<%= @item.person_num %>人</div>
+                    <div class="send-plan"><i class="fa fa-truck"></i>お届け予定：2021年01月</div>
+                  </div>
                 </div>
-                <div class='price-description'>
-                  お礼メッセージ
-                  ご支援いただいた方に、心からのお礼をお送りさせていただきます。
-                  ※支援時、必ず備考欄にご希望のお名前をご記入ください。
-                </div>
-                <div class="price-detail">
-                  <div class="price-support-person"><i class="fas fa-user"></i>支援者：<%= @item.person_num %>人</div>
-                  <div class="send-plan"><i class="fa fa-truck"></i>お届け予定：2021年01月</div>
+                <div class='price-image-box'>
+                  <%= image_tag "cat-1941089_1280.jpg", class: 'price-image' %>
                 </div>
               </div>
-              <div class='price-image-box'>
-                <%= image_tag "cat-1941089_1280.jpg", class: 'price-image' %>
-              </div>
-            </div>
-          </li>
+            </li>
+          <% end %>
         </ul>
       </div>
 
