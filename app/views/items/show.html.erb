@@ -75,12 +75,59 @@
           <%= @item.content %>
         </div>
         <div class="panel tab-B">
-          <%= @item.title %><br>
-          <%= @item.updated_at.strftime("%Y-%m-%d %H:%M") %>
-          <%= @item.content %>
+          <ul class='works-report'>
+            <%# <li class="works-report-list">
+              まだ活動報告がありません。
+            </li> %>
+            <% 3.times do%>
+              <li class="works-report-list">
+                <h1 class='works-title'><%= @item.title %></h1>
+                <div class="update-time">
+                  <%= @item.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                </div>
+                <%= @content_truncate %>
+                <div class="next">
+                  <%= link_to 'もっと見る', "#", class:'next-btn' %><i class="fa fa-angle-right"></i>
+                </div>
+              </li>
+            <% end %>
+          </ul>
         </div>
-        <div class="panel tab-C">コンテンツ3</div>
-        <div class="panel tab-D">コンテンツ4</div>
+        <div class="panel tab-C">
+          <%# 支援者リスト表示 %>
+          <div class="message-container">
+            <ul>
+              <% 3.times do%>
+                <li class="message-list">
+                  <div class="message-user-image">
+                    <%= image_tag "Df9kcOEUcAAFsr9.jpg", class: 'profile-user-image' %>
+                  </div>
+                  <div class="message-box">
+                    <div class="message-name-list">
+                      <div class='message-nickname'>
+                      sato
+                      </div>
+                      <div class="message-update-time">
+                        <%= @item.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                      </div>
+                    </div>
+                    <div class="message-detail">
+                      メッセージ内容を記載する。
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="panel tab-D">
+          <%= form_with(model: @item, local: true) do |form| %>
+            <%= form.text_area "#", placeholder: "プロジェクトに対する意見や投稿しましょう。", class:'form-body-subtitle'%>
+            <div class="message-btn">
+              <%= form.submit "コメントする", class:'message-new-btn' %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
 

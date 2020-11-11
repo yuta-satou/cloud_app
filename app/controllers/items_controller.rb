@@ -46,6 +46,7 @@ class ItemsController < ApplicationController
     @orders = Order.all
     @users = User.all
     @item.remaining_days = (@item.day_id - Date.today).to_i
+    @content_truncate = ApplicationController.helpers.strip_tags(@item.content.to_s).gsub(/[\n]/,"").strip.truncate(100)
   end
 
   def destroy
