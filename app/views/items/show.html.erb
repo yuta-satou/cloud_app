@@ -97,7 +97,8 @@
           <%# 支援者リスト表示 %>
           <div class="message-container">
             <ul>
-              <% 3.times do%>
+              <% @orders.each do |order| %>
+                <% if order.item_id == @item.id %>
                 <li class="message-list">
                   <div class="message-user-image">
                     <%= image_tag "Df9kcOEUcAAFsr9.jpg", class: 'profile-user-image' %>
@@ -105,17 +106,18 @@
                   <div class="message-box">
                     <div class="message-name-list">
                       <div class='message-nickname'>
-                      sato
+                        <%= order.user.nickname %>
                       </div>
                       <div class="message-update-time">
                         <%= @item.updated_at.strftime("%Y-%m-%d %H:%M") %>
                       </div>
                     </div>
                     <div class="message-detail">
-                      メッセージ内容を記載する。
+                      <%= order.comment %>
                     </div>
                   </div>
                 </li>
+                <% end %>
               <% end %>
             </ul>
           </div>

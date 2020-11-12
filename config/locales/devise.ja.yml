@@ -12,6 +12,7 @@ ja:
       order:
         token: クレジット内容
         price: 金額
+        comment: コメント
       user:
         confirmation_sent_at: パスワード確認送信時刻
         confirmation_token: パスワード確認用トークン

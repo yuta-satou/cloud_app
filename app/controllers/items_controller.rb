@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
       day_count = (item.day_id - Date.today).to_i
       item.update(remaining_days: day_count)
     end
-    @items = Item.all
+    @items = Item.includes(:user)
   end
 
   def new
@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @orders = Order.all
+    @orders = Order.includes(:user)
     @users = User.all
     @item.remaining_days = (@item.day_id - Date.today).to_i
     @content_truncate = ApplicationController.helpers.strip_tags(@item.content.to_s).gsub(/[\n]/,"").strip.truncate(100)
