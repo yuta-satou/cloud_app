@@ -43,8 +43,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @orders = Order.includes(:user)
     @users = User.all
+    @orders = Order.all
     @item.remaining_days = (@item.day_id - Date.today).to_i
     @content_truncate = ApplicationController.helpers.strip_tags(@item.content.to_s).gsub(/[\n]/,"").strip.truncate(100)
   end
