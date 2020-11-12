@@ -30,22 +30,23 @@ Things you may want to cover:
 ### 接続先情報 https://crowdfuning-app.herokuapp.com/
 
 ### ID/Pass
- ID: admin
+ID: admin
 Pass: 2222
 
 ### テスト用アカウント等
-支援用
+プロジェクト作成用
 メールアドレス: satou@gmail.com
 パスワード: ssss1234
 
 ### 支援用カード情報
+支援用
+メールアドレス名: yuta@gmail.com
+パスワード: yyyy1234
+
 番号：4242424242424242
 期限：3/24
 セキュリティコード：123
 
-プロジェクト作成用
-メールアドレス名: yuta@gmail.com
-パスワード: yyyy1234
 
 
 
