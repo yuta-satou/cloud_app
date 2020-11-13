@@ -20,6 +20,13 @@
             <h5><span>¥</span> 現在の支援総額</h5>
             <strong><%= @item.start_amount %>円</strong>
             <div>目標金額は<%= @item.target_amount %>円</div>
+            <div class="achievement-rate">
+              <div class="achievement" id="achievement" value="<%= @achievement_rate %>">
+                <%= @achievement_rate %>％
+              </div>
+              <div class="achievement-bar" id="achievement-bar" >
+              </div>
+            </div>
           </div>
         </div>
         <div class='support-person'>

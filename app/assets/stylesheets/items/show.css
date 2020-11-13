@@ -86,7 +86,7 @@
 }
 
 .support-person{
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .support-person-number{
@@ -106,7 +106,7 @@
 }
 
 .recruitment-end{
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -477,3 +477,20 @@
   text-indent: 1em;
   list-style-type: disc;
 }
+
+progress{
+  width: 250px;
+  height: 30px;
+}
+
+
+.achievement-rate{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.achievement{
+  font-size: 18px;
+}
+
+
