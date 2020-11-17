@@ -34,7 +34,8 @@
 
 .form-header{
   width: 19%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .form-body{
   width: 81%;
@@ -46,10 +47,19 @@
 
 .indispensable{
   font-size: 12px;
-  padding: 2px 3px;
+  padding: 1px 3px;
   margin-left: 10px;
   border-radius: 3px;
   background-color: rgb(255, 82, 82);
+  color: white;
+}
+
+.optional{
+  font-size: 12px;
+  padding: 1px 3px;
+  margin-left: 10px;
+  border-radius: 3px;
+  background-color: rgb(93, 158, 255);
   color: white;
 }
 
