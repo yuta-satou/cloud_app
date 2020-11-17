@@ -28,11 +28,12 @@
 
         <div class="form-group">
           <div class="form-header">
-            <%= form.label :sub_title, 'メイン画像' %>
+            <%= form.label :image, 'メイン画像' %>
             <span class="indispensable">必須</span>
           </div>
           <div class="form-body">
-            <%= form.file_field :image, id:"item-image", class:"form-body-image" %>
+            <%= form.file_field :image, id:"item-image" %>
+            <div class="choice_box">ドラック＆ドロップorクリック</div>
             <div id="image-list"></div>
           </div>
         </div>

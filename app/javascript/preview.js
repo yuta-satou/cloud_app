@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function(){
     const imageElement = document.createElement('div');
     const blobImage = document.createElement('img');
     blobImage.setAttribute('src', blob);
-    blobImage.width = 250;
-    blobImage.height = 200;
+    blobImage.width = 350;
+    blobImage.height = 300;
     imageElement.appendChild(blobImage);
     ImageList.appendChild(imageElement);
   });
