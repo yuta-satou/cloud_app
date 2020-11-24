@@ -44,7 +44,7 @@ class ItemsController < ApplicationController
 
   def show
     @users = User.all
-    @orders = Order.all
+    @orders = Order.order("created_at DESC")
     @item.remaining_days = (@item.day_id - Date.today).to_i
     @content_truncate = ApplicationController.helpers.strip_tags(@item.content.to_s).gsub(/[\n]/,"").strip.truncate(100)
     @achievement_rate = (@item.start_amount * 100) / @item.target_amount
